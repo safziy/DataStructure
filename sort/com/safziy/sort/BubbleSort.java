@@ -1,5 +1,7 @@
 package com.safziy.sort;
 
+import java.util.Comparator;
+
 /**
  * 冒泡排序
  * 
@@ -19,13 +21,28 @@ public class BubbleSort {
 						_swap(array, j, j + 1);
 					}
 				}
-
 			}
 		}
 	}
 
 	private static void _swap(int[] array, int i, int j) {
 		int temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+	}
+
+	public static <T> void sort(T[] array, Comparator<? super T> c) {
+		for (int i = array.length - 1; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				if (c.compare(array[j], array[j + 1]) > 0) {
+					_swap(array, i, j);
+				}
+			}
+		}
+	}
+
+	private static <T> void _swap(T[] array, int i, int j) {
+		T temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
 	}
