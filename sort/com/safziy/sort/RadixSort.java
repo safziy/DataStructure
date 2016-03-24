@@ -69,6 +69,7 @@ public class RadixSort {
 				int subKey = (temp[m] >> rateDigit) & radix;
 				array[--buckets[subKey]] = temp[m];
 			}
+
 			rateDigit += radixDigit;
 		}
 
