@@ -103,7 +103,7 @@ public class SortTest {
 			QuickSort.sort(sortDescArray[i], false);
 		}
 	}
-	
+
 	@Test
 	public void testRadixSort() {
 		for (int i = 0; i < sortAscArray.length; i++) {
@@ -111,6 +111,46 @@ public class SortTest {
 		}
 		for (int i = 0; i < sortDescArray.length; i++) {
 			RadixSort.sort(sortDescArray[i], false);
+		}
+	}
+
+	@Test
+	public void testRadixSort16() {
+		for (int i = 0; i < sortAscArray.length; i++) {
+			RadixSort.sort(sortAscArray[i], true, 16);
+		}
+		for (int i = 0; i < sortDescArray.length; i++) {
+			RadixSort.sort(sortDescArray[i], false, 16);
+		}
+	}
+
+	@Test
+	public void testRadixSort32() {
+		for (int i = 0; i < sortAscArray.length; i++) {
+			RadixSort.sort(sortAscArray[i], true, 32);
+		}
+		for (int i = 0; i < sortDescArray.length; i++) {
+			RadixSort.sort(sortDescArray[i], false, 32);
+		}
+	}
+
+	@Test
+	public void testRadixSort64() {
+		for (int i = 0; i < sortAscArray.length; i++) {
+			RadixSort.sort(sortAscArray[i], true, 64);
+		}
+		for (int i = 0; i < sortDescArray.length; i++) {
+			RadixSort.sort(sortDescArray[i], false, 64);
+		}
+	}
+	
+	@Test
+	public void testRadixSort512() {
+		for (int i = 0; i < sortAscArray.length; i++) {
+			RadixSort.sort(sortAscArray[i], true, 512);
+		}
+		for (int i = 0; i < sortDescArray.length; i++) {
+			RadixSort.sort(sortDescArray[i], false, 512);
 		}
 	}
 
