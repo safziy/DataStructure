@@ -103,5 +103,15 @@ public class SortTest {
 			QuickSort.sort(sortDescArray[i], false);
 		}
 	}
+	
+	@Test
+	public void testRadixSort() {
+		for (int i = 0; i < sortAscArray.length; i++) {
+			RadixSort.sort(sortAscArray[i], true);
+		}
+		for (int i = 0; i < sortDescArray.length; i++) {
+			RadixSort.sort(sortDescArray[i], false);
+		}
+	}
 
 }
