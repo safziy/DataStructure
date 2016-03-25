@@ -1,7 +1,7 @@
 package com.safziy.tree;
 
-public interface Tree<T> {
-	void add(T t);
+public interface Tree{
+	void add(int v);
 	
-	boolean remove(T t);
+	boolean remove(int v);
 }

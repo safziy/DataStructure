@@ -1,15 +1,15 @@
 package com.safziy.tree;
 
-public abstract class BinaryTree<T> implements Tree<T> {
+public abstract class BinaryTree implements Tree {
 	class Node {
 		Node left = null;
 		Node right = null;
-		T t;
+		int t;
 		
 		Node(){
 		}
 		
-		Node(T t){
+		Node(int t){
 			this.t = t;
 		}
 	}
