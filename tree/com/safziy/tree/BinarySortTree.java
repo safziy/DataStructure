@@ -39,6 +39,7 @@ public class BinarySortTree<E> {
 	 * 
 	 *            这是递归实现
 	 */
+	@SuppressWarnings({ "unused", "unchecked" })
 	private boolean searchBST(Entry<E> t, Object element, Entry<E> f, Entry<E> p) {
 		if (t == null) {
 			p = f;
@@ -60,6 +61,7 @@ public class BinarySortTree<E> {
 	 * 
 	 * 这是非递归实现
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private boolean searchBST(Object element, Entry[] p) {
 		Comparable<? super E> e = (Comparable<? super E>) element;
 		Entry<E> parent = root;
@@ -84,6 +86,7 @@ public class BinarySortTree<E> {
 	/**
 	 * 首先查找二叉排序树，如果找不到指定元素 则插入到二叉树中
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public boolean add(E element) {
 		Entry<E> t = root;
 		if (t == null) {
@@ -117,6 +120,7 @@ public class BinarySortTree<E> {
 	 * 可以得到一个有序序列，在删去p后为了保持其他元素的相对位置不变，可以这样做：
 	 * 令p的直接前驱(或直接后继)替代p，然后删除其直接前驱或直接后继。其直接前驱可由 中序遍历的特点获得
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public boolean remove(Object o) {
 		Entry[] p = new Entry[1];
 		if (searchBST(o, p)) {
